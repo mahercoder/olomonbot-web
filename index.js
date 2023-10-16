@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 3000
 app.use(express.static('public'))
 
 app.get('/connect', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/styles.css'));
   res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
