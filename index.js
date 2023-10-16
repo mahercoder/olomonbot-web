@@ -7,16 +7,15 @@ const PORT = process.env.PORT || 3000
 app.use(express.static('public'))
 
 app.get('/connect', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/styles.css'));
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 app.get('/privacy-policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/privacy-policy.html'));
+  res.sendFile(path.join(__dirname, '/public/privacy-policy.html'));
 });
 
 app.get('/terms-of-service', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/terms-of-service.html'));
+  res.sendFile(path.join(__dirname, '/public/terms-of-service.html'));
 });
 
 app.listen(PORT, () => {
