@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0&appId=1089632039120020" nonce="DTnEn7lM"></script>
     <title>Olomon | Bot</title>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
     <script>
@@ -34,12 +34,22 @@
         }
     </script>
 
-    <fb:login-button 
-        scope="public_profile,email"
-        onlogin="checkLoginState();">
-    </fb:login-button>
 
-    <div class="fb-login-button" data-width="" data-size="" data-button-type="" data-layout="" data-auto-logout-link="false" data-use-continue-as="true"></div>
 
+    <div class="content">
+        <div class="flex-div">
+            <form>
+                <div class="name-content">
+                    <h1 class="logo">Olomon | Bot</h1>
+                    <p>🔥 Automate your facebook leads easily!</p>
+                </div>
+                <fb:login-button 
+                    scope="public_profile,email"
+                    onlogin="checkLoginState();"
+                    class="login">
+                </fb:login-button>
+            </form>
+        </div>
+      </div>
 </body>
 </html>
