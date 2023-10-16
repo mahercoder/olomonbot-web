@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
 * {
   margin: 0;
@@ -16,31 +17,31 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  width: 440px;
+  height: 300px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .name-content .logo {
   font-size: 3.5rem;
   color: #1877f2;
+  text-align: center;
 }
 
 .name-content p {
   font-size: 1.2rem;
   font-weight: 500;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  padding: 2rem;
-  width: 530px;
-  height: 300px;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-}
-
-form .login {
+.name-content .login {
+  width: 100%;
   outline: none;
   border: none;
   background: #1877f2;
@@ -48,125 +49,21 @@ form .login {
   border-radius: 0.4rem;
   font-size: 1.1rem;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-form .login:hover {
+.name-content .login:hover {
   background: #0f71f1;
   cursor: pointer;
 }
 
-/* //.........Media Query.........// */
-
-@media (max-width: 500px) {
-  html {
-    font-size: 60%;
-  }
-
-  .name-content {
-    margin: 0;
-    text-align: center;
-  }
-
-  form {
-    width: 300px;
-    height: fit-content;
-  }
-
-  form .login {
-    font-size: 1.5rem;
-  }
-
-  form a {
-    font-size: 1.5rem;
-  }
-
-  .flex-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-  }
+.name-content .login i {
+  margin-right: 0px;
 }
 
-@media (min-width: 501px) and (max-width: 768px) {
-  html {
-    font-size: 60%;
-  }
-
-  .name-content {
-    margin: 0;
-    text-align: center;
-  }
-
-  form {
-    width: 300px;
-    height: fit-content;
-  }
-
-  form input {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-
-  form .login {
-    font-size: 1.5rem;
-  }
-
-  form a {
-    font-size: 1.5rem;
-  }
-
-  form .create-account {
-    font-size: 1.5rem;
-  }
-
-  .flex-div {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  html {
-    font-size: 60%;
-  }
-
-  .name-content {
-    margin: 0;
-    text-align: center;
-  }
-
-  form {
-    width: 300px;
-    height: fit-content;
-  }
-
-  form input {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-
-  form .login {
-    font-size: 1.5rem;
-  }
-
-  form a {
-    font-size: 1.5rem;
-  }
-
-  form .create-account {
-    font-size: 1.5rem;
-  }
-
-  .flex-div {
-    display: flex;
-    flex-direction: column;
-  }
-
-  @media (orientation: landscape) and (max-height: 500px) {
-    .header {
-      height: 90vmax;
-    }
-  }  
+.name-content .login span {
+  flex-grow: 1; /* Matn markazda joylashsin */
+  text-align: center; /* Matn markazga yotadi */
 }
