@@ -4,18 +4,18 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000
 
-app.use('/static', express.static('public'))
+app.use('/', express.static('public'))
 
 app.get('/connect', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 app.get('/privacy-policy', (req, res) => {
-  res.sendFile(path.join(__dirname, 'privacy-policy.html'));
+  res.sendFile(path.join(__dirname, 'public/privacy-policy.html'));
 });
 
 app.get('/terms-of-service', (req, res) => {
-  res.sendFile(path.join(__dirname, 'terms-of-service.html'));
+  res.sendFile(path.join(__dirname, 'public/terms-of-service.html'));
 });
 
 app.listen(PORT, () => {
