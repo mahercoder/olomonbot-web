@@ -4,36 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" /></script>
     <title>Olomon | Bot</title>
 </head>
 <body>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '1089632039120020',
-                cookie     : true,
-                xfbml      : true,
-                version    : 'v18.0'
-            });
-                
-            FB.AppEvents.logPageView();   
-        };
-    
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        function checkLoginState() {
-            FB.getLoginStatus(function(response) {
-                // statusChangeCallback(response);
-                console.log(response)
-            });
-        }
-    </script>
     <div class="content">
         <div class="name-content">
             <h1 class="logo">Olomon Bot</h1>
@@ -43,10 +17,10 @@
             </button>
         </div>
         
-        <fb:login-button
+        <!-- <fb:login-button
             scope="public_profile,email"
             onlogin="checkLoginState();">
-        </fb:login-button>
+        </fb:login-button> -->
     </div>
 
 </body>
