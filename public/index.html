@@ -3,24 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/public/style.css" />
-    <script src="/public/script.js" /></script>
     <title>Olomon | Bot</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f2f4f7;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            height: 160px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+            border-radius: 0.2rem;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .name-content .logo {
+            font-size: 2rem;
+            color: #4561B0;
+            text-align: center;
+        }
+
+        .name-content p {
+            font-size: 0.7rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1089632039120020',
+                cookie     : true,
+                xfbml      : true,
+                version    : 'v18.0'
+            });
+                
+            FB.AppEvents.logPageView();   
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                // statusChangeCallback(response);
+                console.log(response)
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="content">
         <div class="name-content">
             <h1 class="logo">Olomon Bot</h1>
             <p>🔥 Automate your facebook leads easily with us!</p>
-            <!-- <button class="login" scope="public_profile,email" onclick="checkLoginState()">
-                <i class="fab fa-facebook"></i> <span>Log In</span>
-            </button> -->
         </div>
         
         <fb:login-button
+            class="login"
             scope="public_profile,email"
             onlogin="checkLoginState();"
-            size="xlarge">
+            size="large">
         </fb:login-button>
     </div>
 
