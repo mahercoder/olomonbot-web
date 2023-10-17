@@ -18,8 +18,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 440px;
-  height: 300px;
+  width: 520px;
+  height: 250px;
   background: #fff;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   border-radius: 0.5rem;
@@ -30,7 +30,8 @@ body {
 
 .name-content .logo {
   font-size: 3.5rem;
-  color: #1877f2;
+  /* color: #1877f2; */
+  color: #4561B0;
   text-align: center;
 }
 
